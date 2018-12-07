@@ -21,7 +21,7 @@ public class StudentException extends Exception{
                 message = "Error, the object student already exist in the database";
                 break;
             case 222:
-                message = "";
+                message = "Error, the object student no exist in the database";
                 break;
         }
 

@@ -104,3 +104,65 @@
 2018-12-07 12:55:46 INFO  StudentService:28 - Checking student existing...
 2018-12-07 12:55:46 ERROR StudentService:33 - Existing object, Student(name=Leandro, lastName=Leguiza, email=leanleguiza@gmail.com, dni=40731455, telephone=43675432, cellphone=1187873402, address=Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888), academicLevel=Primario, dictationSubjects=[Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)], enabled=true)
 2018-12-07 12:55:46 INFO  StudentTest:66 - Getting student...
+2018-12-07 14:54:06 INFO  StudentTest:33 - Creating address..
+2018-12-07 14:54:06 DEBUG StudentTest:36 - Object created Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888)
+2018-12-07 14:54:06 INFO  StudentTest:38 - Creating subjects..
+2018-12-07 14:54:06 DEBUG StudentTest:43 - Object created [Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)]
+2018-12-07 14:54:06 INFO  StudentTest:45 - Creating student..
+2018-12-07 14:54:06 DEBUG StudentTest:50 - Object created Student(name=Leandro, lastName=Leguiza, email=leanleguiza@gmail.com, dni=40731455, telephone=43675432, cellphone=1187873402, address=Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888), academicLevel=Primario, dictationSubjects=[Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)], enabled=true)
+2018-12-07 14:54:06 DEBUG StudentTest:54 - Saving student...
+2018-12-07 14:54:06 INFO  StudentService:28 - Checking student existing...
+2018-12-07 14:54:06 ERROR StudentService:33 - Existing object, Student(name=Leandro, lastName=Leguiza, email=leanleguiza@gmail.com, dni=40731455, telephone=43675432, cellphone=1187873402, address=Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888), academicLevel=Primario, dictationSubjects=[Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)], enabled=true)
+2018-12-07 14:54:06 INFO  StudentTest:66 - Getting student...
+2018-12-07 15:40:51 INFO  StudentTest:34 - Creating address..
+2018-12-07 15:40:51 DEBUG StudentTest:37 - Object created Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888)
+2018-12-07 15:40:51 INFO  StudentTest:39 - Creating subjects..
+2018-12-07 15:40:51 DEBUG StudentTest:44 - Object created [Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)]
+2018-12-07 15:40:51 INFO  StudentTest:46 - Creating student..
+2018-12-07 15:40:51 DEBUG StudentTest:51 - Object created Student(name=Leandro, lastName=Leguiza, email=leanleguiza@gmail.com, dni=40731455, telephone=43675432, cellphone=1187873402, address=Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888), academicLevel=Primario, dictationSubjects=[Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)], enabled=true)
+2018-12-07 15:40:51 DEBUG StudentTest:55 - Saving student...
+2018-12-07 15:41:52 INFO  StudentTest:34 - Creating address..
+2018-12-07 15:41:52 DEBUG StudentTest:37 - Object created Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888)
+2018-12-07 15:41:52 INFO  StudentTest:39 - Creating subjects..
+2018-12-07 15:41:52 DEBUG StudentTest:44 - Object created [Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)]
+2018-12-07 15:41:52 INFO  StudentTest:46 - Creating student..
+2018-12-07 15:41:52 DEBUG StudentTest:51 - Object created Student(name=Leandro, lastName=Leguiza, email=leanleguiza@gmail.com, dni=40731455, telephone=43675432, cellphone=1187873402, address=Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888), academicLevel=Primario, dictationSubjects=[Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)], enabled=true)
+2018-12-07 15:41:52 DEBUG StudentTest:55 - Saving student...
+2018-12-07 15:43:52 INFO  StudentTest:34 - Creating address..
+2018-12-07 15:43:52 DEBUG StudentTest:37 - Object created Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888)
+2018-12-07 15:43:52 INFO  StudentTest:39 - Creating subjects..
+2018-12-07 15:43:52 DEBUG StudentTest:44 - Object created [Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)]
+2018-12-07 15:43:52 INFO  StudentTest:46 - Creating student..
+2018-12-07 15:43:52 DEBUG StudentTest:51 - Object created Student(name=Leandro, lastName=Leguiza, email=leanleguiza@gmail.com, dni=40731455, telephone=43675432, cellphone=1187873402, address=Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888), academicLevel=Primario, dictationSubjects=[Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)], enabled=true)
+2018-12-07 15:43:52 DEBUG StudentTest:55 - Saving student...
+2018-12-07 15:44:38 INFO  StudentTest:34 - Creating address..
+2018-12-07 15:44:38 DEBUG StudentTest:37 - Object created Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888)
+2018-12-07 15:44:38 INFO  StudentTest:39 - Creating subjects..
+2018-12-07 15:44:38 DEBUG StudentTest:44 - Object created [Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)]
+2018-12-07 15:44:38 INFO  StudentTest:46 - Creating student..
+2018-12-07 15:44:38 DEBUG StudentTest:51 - Object created Student(name=Leandro, lastName=Leguiza, email=leanleguiza@gmail.com, dni=40731455, telephone=43675432, cellphone=1187873402, address=Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888), academicLevel=Primario, dictationSubjects=[Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)], enabled=true)
+2018-12-07 15:44:38 DEBUG StudentTest:55 - Saving student...
+2018-12-07 15:44:59 INFO  StudentTest:34 - Creating address..
+2018-12-07 15:45:15 DEBUG StudentTest:37 - Object created Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888)
+2018-12-07 15:45:17 INFO  StudentTest:39 - Creating subjects..
+2018-12-07 15:45:19 DEBUG StudentTest:44 - Object created [Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)]
+2018-12-07 15:45:23 INFO  StudentTest:46 - Creating student..
+2018-12-07 15:45:34 DEBUG StudentTest:51 - Object created Student(name=Leandro, lastName=Leguiza, email=leanleguiza@gmail.com, dni=40731455, telephone=43675432, cellphone=1187873402, address=Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888), academicLevel=Primario, dictationSubjects=[Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)], enabled=true)
+2018-12-07 15:45:42 DEBUG StudentTest:55 - Saving student...
+2018-12-07 15:48:01 INFO  StudentTest:34 - Creating address..
+2018-12-07 15:48:08 DEBUG StudentTest:37 - Object created Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888)
+2018-12-07 15:48:08 INFO  StudentTest:39 - Creating subjects..
+2018-12-07 15:48:09 DEBUG StudentTest:44 - Object created [Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)]
+2018-12-07 15:48:09 INFO  StudentTest:46 - Creating student..
+2018-12-07 15:48:11 DEBUG StudentTest:51 - Object created Student(name=Leandro, lastName=Leguiza, email=leanleguiza@gmail.com, dni=40731455, telephone=43675432, cellphone=1187873402, address=Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888), academicLevel=Primario, dictationSubjects=[Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)], enabled=true)
+2018-12-07 15:48:11 DEBUG StudentTest:55 - Saving student...
+2018-12-07 15:55:23 INFO  StudentTest:34 - Creating address..
+2018-12-07 15:55:23 DEBUG StudentTest:37 - Object created Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888)
+2018-12-07 15:55:23 INFO  StudentTest:39 - Creating subjects..
+2018-12-07 15:55:23 DEBUG StudentTest:44 - Object created [Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)]
+2018-12-07 15:55:23 INFO  StudentTest:46 - Creating student..
+2018-12-07 15:55:23 DEBUG StudentTest:51 - Object created Student(name=Leandro, lastName=Leguiza, email=leanleguiza@gmail.com, dni=40731455, telephone=43675432, cellphone=1187873402, address=Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888), academicLevel=Primario, dictationSubjects=[Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)], enabled=true)
+2018-12-07 15:55:23 DEBUG StudentTest:55 - Saving student...
+2018-12-07 15:55:23 INFO  StudentService:29 - Checking student existing...
+2018-12-07 15:55:23 ERROR StudentService:34 - Existing object, Student(name=Leandro, lastName=Leguiza, email=leanleguiza@gmail.com, dni=40731455, telephone=43675432, cellphone=1187873402, address=Address(street=Lisboa, number=714, city=Florencio Varela, state=Buenos Aires, country=Argentina, zipCode=1888), academicLevel=Primario, dictationSubjects=[Subject(name=Lengua, description=Lengua, level=Secundario), Subject(name=Matematicas, description=Matematicas, level=Secundario)], enabled=true)
+2018-12-07 15:55:23 INFO  StudentService:61 - Checking student existing...
