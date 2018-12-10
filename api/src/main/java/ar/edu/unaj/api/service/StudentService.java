@@ -33,7 +33,7 @@ public class StudentService implements GeneralService<Student, String>{
             this.studentRepository.save(student);
         } else {
             log.error(String.format("Existing object, %s", student));
-            throw new StudentException(111);
+            throw new StudentException(100111);
         }
     }
 
@@ -44,14 +44,34 @@ public class StudentService implements GeneralService<Student, String>{
     }
 
     @Override
-    public Student findById(String id) {
+    public Student findById(String id) throws StudentException{
 
-        return this.studentRepository.getOneById(id);
+        Boolean exist = this.studentRepository.existsById(id);
+
+        log.info("Checking student existing...");
+
+        if (exist) {
+            log.debug("Returning student..");
+            return this.studentRepository.getOneById(id);
+        } else {
+            log.error(String.format("No existing student object with id: %s", id));
+            throw new StudentException(100222);
+        }
     }
 
-    public Student findByDni(String dni) {
+    public Student findByDni(String dni) throws StudentException{
 
-        return this.studentRepository.getOneByDni(dni);
+        Boolean exist = this.studentRepository.existsByDni(dni);
+
+        log.info("Checking student existing...");
+
+        if (exist) {
+            log.debug("Returning student..");
+            return this.studentRepository.getOneByDni(dni);
+        } else {
+            log.error(String.format("No existing student object with DNI: %s", dni));
+            throw new StudentException(100222);
+        }
     }
 
     @Override
@@ -63,10 +83,11 @@ public class StudentService implements GeneralService<Student, String>{
         log.info("Checking student existing...");
 
         if (dniExist && emailExist) {
+            log.debug("Updating student..");
             this.studentRepository.save(student);
         } else {
             log.error(String.format("No existing object, %s", student));
-            throw new StudentException(222);
+            throw new StudentException(100222);
         }
     }
 
@@ -76,27 +97,34 @@ public class StudentService implements GeneralService<Student, String>{
         Student student = this.studentRepository.getOneById(id);
 
         if (student != null) {
+            log.debug("Deleting student..");
             this.studentRepository.delete(this.studentRepository.getOneById(id));
         } else {
             log.error(String.format("No existing object with id %s", id));
-            throw new StudentException(222);
+            throw new StudentException(100222);
         }
     }
 
-    @Override
-    public void disable(String id) throws StudentException{
+    public void disable (Student student) throws StudentException{
 
-        Student student = this.studentRepository.getOneById(id);
+        Boolean exist = this.studentRepository.existsById(student.getId());
 
-        if (student != null) {
+        if (student != null && exist) {
 
-            student.setEnabled(false);
-            this.studentRepository.save(student);
+            if (student.getEnabled()) {
+
+                student.setEnabled(false);
+                log.debug("Updating disabled student..");
+                this.studentRepository.save(student);
+
+            } else {
+                log.info("The student is already disable");
+            }
 
         } else {
 
-            log.error(String.format("No existing object with id %s", id));
-            throw new StudentException(222);
+            log.error(String.format("No existing object %s", student));
+            throw new StudentException(100222);
 
         }
     }

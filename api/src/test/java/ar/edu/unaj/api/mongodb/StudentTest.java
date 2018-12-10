@@ -6,6 +6,7 @@ import ar.edu.unaj.api.beans.entity.Student;
 import ar.edu.unaj.api.exception.StudentException;
 import ar.edu.unaj.api.service.StudentService;
 import lombok.extern.log4j.Log4j;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -41,8 +42,8 @@ public class StudentTest {
     public void setup () {
 
         log.info("Loading data for the object Student...");
-        this.nameTest = "Arturo";
-        this.lastNameTest = "Jauretche";
+        this.nameTest = "ARTURO";
+        this.lastNameTest = "JAURETCHE";
         this.dniTest = "13780036";
         this.emailTest = "arturojauretche@unaj.edu.ar";
         this.telephoneTest = "43556473";
@@ -78,7 +79,7 @@ public class StudentTest {
     }
 
     @Test
-    public void getAll() {
+    public void getAllTest () {
 
         log.info("Getting student...");
         List<Student> studentsList = this.studentService.findAll();
@@ -91,23 +92,55 @@ public class StudentTest {
     }
 
     @Test
-    public void update() {
+    public void updateTest () {
 
-        Student student = this.studentService.findByDni (this.dniTest);
-        student.setName("Arturo Martin");
-        student.setLastName("Jauretche");
-        student.setDni("13780035");
+        Student student  = null;
 
         try {
+
+            student = this.studentService.findByDni (this.dniTest);
+
+            student.setName("Arturo");
+            student.setLastName("Jauretche");
+
             this.studentService.update(student);
+
         } catch (StudentException e) {
             System.out.println(e.getMessage());
         }
 
         System.out.println(student);
 
-        assertTrue("Update failed",student.getDni() == "13780035"
-                    && student.getName() == "Arturo Martin"
+        assertTrue("Update failed",student.getName() == "Arturo"
                     && student.getLastName() == "Jauretche");
+    }
+
+    @Test
+    public void disableTest () {
+        Student student = null;
+
+        try {
+
+            student = this.studentService.findByDni(dniTest);
+
+            this.studentService.disable(student);
+
+        } catch (StudentException e) {
+            System.out.println(e.getMessage());
+        }
+
+        System.out.println(student);
+
+        assertFalse("Disable test failed", student.getEnabled());
+    }
+
+    @After
+    public void end () {
+        try {
+            Student student = this.studentService.findByDni(this.dniTest);
+            this.studentService.delete(student.getId());
+        } catch (StudentException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

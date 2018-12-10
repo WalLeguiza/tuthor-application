@@ -11,7 +11,7 @@ import java.util.List;
 @Getter @Setter
 @EqualsAndHashCode
 @NoArgsConstructor
-@ToString (exclude = {"id", "enable"})
+@ToString (exclude = {"id"})
 @Document (collection = "students")
 public class Student {
 
@@ -26,7 +26,7 @@ public class Student {
     private Address address;
     private String academicLevel;
     private List<Subject> dictationSubjects;
-    private boolean enabled;
+    private Boolean enabled;
 
     /**
      * Constructor with all arguments less id.
@@ -43,7 +43,7 @@ public class Student {
      * @param enabled
      */
     public Student(String name, String lastName, String email, String dni, String telephone, String cellphone,
-                   Address address, String academicLevel, List<Subject> dictationSubjects, boolean enabled) {
+                   Address address, String academicLevel, List<Subject> dictationSubjects, Boolean enabled) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
@@ -55,4 +55,5 @@ public class Student {
         this.dictationSubjects = dictationSubjects;
         this.enabled = enabled;
     }
+
 }
