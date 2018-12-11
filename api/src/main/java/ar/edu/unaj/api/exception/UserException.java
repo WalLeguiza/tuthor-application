@@ -1,10 +1,10 @@
 package ar.edu.unaj.api.exception;
 
-public class StudentException extends Exception{
+public class UserException extends Exception{
 
     private int codeError;
 
-    public StudentException (int codeError) {
+    public UserException(int codeError) {
 
         super ();
         this.codeError = codeError;

@@ -2,9 +2,9 @@ package ar.edu.unaj.api.mongodb;
 
 import ar.edu.unaj.api.beans.domain.Address;
 import ar.edu.unaj.api.beans.domain.Subject;
-import ar.edu.unaj.api.beans.entity.Student;
-import ar.edu.unaj.api.exception.StudentException;
-import ar.edu.unaj.api.service.StudentService;
+import ar.edu.unaj.api.beans.entity.User;
+import ar.edu.unaj.api.exception.UserException;
+import ar.edu.unaj.api.service.UserService;
 import lombok.extern.log4j.Log4j;
 import org.junit.After;
 import org.junit.Before;
@@ -22,10 +22,10 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Log4j
-public class StudentTest {
+public class UserTest {
 
     @Autowired
-    private StudentService studentService;
+    private UserService userService;
 
     private String nameTest;
     private String lastNameTest;
@@ -41,7 +41,7 @@ public class StudentTest {
     @Before
     public void setup () {
 
-        log.info("Loading data for the object Student...");
+        log.info("Loading data for the object User...");
         this.nameTest = "ARTURO";
         this.lastNameTest = "JAURETCHE";
         this.dniTest = "13780036";
@@ -59,20 +59,20 @@ public class StudentTest {
 
         this.subjectsDictationTest = Arrays.asList(subjects);
         this.enabledTest = Boolean.TRUE;
-        log.debug("Loaded data for the object student...");
+        log.debug("Loaded data for the object user...");
 
-        log.info("Creating student..");
-        Student student = new Student(nameTest, lastNameTest, emailTest, dniTest, telephoneTest,
+        log.info("Creating user..");
+        User user = new User(nameTest, lastNameTest, emailTest, dniTest, telephoneTest,
                 cellphoneTest, addressTest, academicLevelTest, subjectsDictationTest, enabledTest);
-        log.debug(String.format("Object created %s", student));
+        log.debug(String.format("Object created %s", user));
 
         try {
 
-            log.debug("Saving student...");
-            this.studentService.create(student);
-            log.debug(String.format("Saved %s", student));
+            log.debug("Saving user...");
+            this.userService.create(user);
+            log.debug(String.format("Saved %s", user));
 
-        } catch (StudentException e) {
+        } catch (UserException e) {
             System.out.println(e.getMessage());
         }
 
@@ -82,7 +82,7 @@ public class StudentTest {
     public void getAllTest () {
 
         log.info("Getting student...");
-        List<Student> studentsList = this.studentService.findAll();
+        List<User> studentsList = this.userService.findAll();
 
         studentsList.forEach(System.out::println);
 
@@ -94,52 +94,52 @@ public class StudentTest {
     @Test
     public void updateTest () {
 
-        Student student  = null;
+        User user = null;
 
         try {
 
-            student = this.studentService.findByDni (this.dniTest);
+            user = this.userService.findByDni (this.dniTest);
 
-            student.setName("Arturo");
-            student.setLastName("Jauretche");
+            user.setName("Arturo");
+            user.setLastName("Jauretche");
 
-            this.studentService.update(student);
+            this.userService.update(user);
 
-        } catch (StudentException e) {
+        } catch (UserException e) {
             System.out.println(e.getMessage());
         }
 
-        System.out.println(student);
+        System.out.println(user);
 
-        assertTrue("Update failed",student.getName() == "Arturo"
-                    && student.getLastName() == "Jauretche");
+        assertTrue("Update failed", user.getName() == "Arturo"
+                    && user.getLastName() == "Jauretche");
     }
 
     @Test
     public void disableTest () {
-        Student student = null;
+        User user = null;
 
         try {
 
-            student = this.studentService.findByDni(dniTest);
+            user = this.userService.findByDni(dniTest);
 
-            this.studentService.disable(student);
+            this.userService.disable(user);
 
-        } catch (StudentException e) {
+        } catch (UserException e) {
             System.out.println(e.getMessage());
         }
 
-        System.out.println(student);
+        System.out.println(user);
 
-        assertFalse("Disable test failed", student.getEnabled());
+        assertFalse("Disable test failed", user.getEnabled());
     }
 
     @After
     public void end () {
         try {
-            Student student = this.studentService.findByDni(this.dniTest);
-            this.studentService.delete(student.getId());
-        } catch (StudentException e) {
+            User user = this.userService.findByDni(this.dniTest);
+            this.userService.delete(user.getId());
+        } catch (UserException e) {
             System.out.println(e.getMessage());
         }
     }

@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @ToString (exclude = {"id"})
 @Document (collection = "students")
-public class Student {
+public class User {
 
     @Id
     private String id;
@@ -42,8 +42,8 @@ public class Student {
      * @param dictationSubjects
      * @param enabled
      */
-    public Student(String name, String lastName, String email, String dni, String telephone, String cellphone,
-                   Address address, String academicLevel, List<Subject> dictationSubjects, Boolean enabled) {
+    public User(String name, String lastName, String email, String dni, String telephone, String cellphone,
+                Address address, String academicLevel, List<Subject> dictationSubjects, Boolean enabled) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
